@@ -1,0 +1,244 @@
+/* =========================================
+   1. ЗАГАЛЬНІ НАЛАШТУВАННЯ СТОРІНКИ
+   ========================================= */
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* Світло-сірий фон, щоб білі картки добре виділялися */
+    background-color: #ecf0f1;
+    color: #333;
+}
+
+/* --- HEADER & NAV --- */
+header {
+    background-color: #16a085; /* Темно-зелений */
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Додаємо легку тінь і хедеру, щоб він "нависав" над контентом */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px; /* Закруглені кнопки меню */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    background-color: #1abc9c;
+    transform: translateY(-2px); /* Ефект підняття кнопки */
+}
+
+/* --- MAIN CONTAINER --- */
+main {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Центруємо весь контент */
+    display: block;
+}
+
+h2 {
+    color: #27ae60;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* Декоративна лінія знизу */
+    border-bottom: 3px solid #27ae60;
+    display: inline-block;
+    padding-bottom: 5px;
+    /* Центрування самого блоку заголовка */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* =========================================
+   2. УНІВЕРСАЛЬНИЙ СТИЛЬ "КАРТКИ"
+   (Застосовується і до календаря, і до секцій)
+   ========================================= */
+
+.calendar, section {
+    /* a. Колір фону та тексту */
+    background-color: #ffffff;
+    color: #333333;
+
+    /* b. Ширина та внутрішні відступи */
+    width: 100%;
+    max-width: 1200px;
+    padding: 25px;         /* Більше повітря всередині */
+    box-sizing: border-box;
+
+    /* c. Закруглені кути (Сильніше закруглення) */
+    border-radius: 20px;
+
+    /* d. Тінь (Глибока, м'яка тінь для 3D ефекту) */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
+    /* e. Позиціювання */
+    margin: 0 auto 3rem auto; /* Центр по горизонталі, відступ знизу */
+}
+
+/* =========================================
+   3. СПЕЦИФІКА КАЛЕНДАРЯ
+   ========================================= */
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px; /* Більший проміжок між днями */
+}
+
+/* Заголовки днів (Пн, Вт...) */
+.calendar-header {
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 5px;
+    background-color: #27ae60;
+    color: white;
+    border-radius: 10px; /* Округлені плашки */
+    font-size: 1rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Тінь для заголовків */
+}
+
+/* Комірка дня */
+.calendar-day {
+    min-height: 140px;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #eee; /* Дуже тонка рамка */
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s; /* Анімація при наведенні */
+}
+
+.calendar-day:hover {
+    transform: scale(1.02); /* Легке збільшення при наведенні */
+    border-color: #27ae60;
+    z-index: 1;
+}
+
+.calendar-day-number {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #16a085;
+}
+
+.calendar-day.empty {
+    background: #f8f9fa;
+    border: none;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.03); /* Внутрішня тінь */
+}
+
+/* Події (Пари) */
+.event {
+    background: #d4efdf;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    border-left: 4px solid #27ae60;
+    color: #2c3e50;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.event:nth-child(even) {
+    background: #fff8e1;
+    border-left-color: #f39c12;
+}
+
+/* =========================================
+   4. FOOTER & TABLES
+   ========================================= */
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #16a085;
+    color: white;
+    margin-top: auto;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #a3e4d7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Стилі для таблиць (на майбутнє) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #27ae60;
+    color: white;
+    text-align: left;
+}
+
+
+@media (max-width: 768px) {
+    .calendar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .calendar-header {
+        display: none;
+    }
+    main {
+        padding: 0 15px;
+    }
+    .calendar, section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar {
+        grid-template-columns: 1fr;
+    }
+    .calendar-day {
+        min-height: auto;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}

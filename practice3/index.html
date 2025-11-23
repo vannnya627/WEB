@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Flexbox Copy</title>
+    <link rel="stylesheet" href="css/practice3.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-left">
+        <div class="menu-icon" onclick="toggleSidebar()">☰</div>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" height="20">
+        </div>
+    </div>
+
+    <div class="header-center">
+        <div class="search-bar">
+            <input type="text" placeholder="Введіть запит">
+            <button class="search-btn">🔍</button>
+        </div>
+        <div class="voice-icon" title="Голосовий пошук">🎤</div>
+    </div>
+
+    <div class="header-right">
+        <div class="icon" title="Створити">📹</div>
+        <div class="icon" title="Сповіщення">🔔</div>
+        <div class="user-avatar">A</div>
+    </div>
+</header>
+
+<div class="main-container">
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-section">
+            <div class="nav-item active">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Головна</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-text">Shorts</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">📺</span>
+                <span class="nav-text">Підписки</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">🎵</span>
+                <span class="nav-text">YouTube Music</span>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="sidebar-section">
+            <h4 class="section-title">ВИ</h4>
+            <div class="nav-item">
+                <span class="nav-icon">🕒</span>
+                <span class="nav-text">Історія</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">📚</span>
+                <span class="nav-text">Плейлисти</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">▶️</span>
+                <span class="nav-text">Ваші відео</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">🕓</span>
+                <span class="nav-text">Дивитись пізніше</span>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="sidebar-section">
+            <h4 class="section-title">ПІДПИСКИ</h4>
+            <div class="nav-item">
+                <div class="channel-dot"></div>
+                <span class="nav-text">Red Bull</span>
+            </div>
+            <div class="nav-item">
+                <div class="channel-dot"></div>
+                <span class="nav-text">AreaWeb</span>
+            </div>
+            <div class="nav-item">
+                <div class="channel-dot"></div>
+                <span class="nav-text">Maincast Basketball</span>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="sidebar-section settings-section">
+            <div class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Налаштування</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">❓</span>
+                <span class="nav-text">Довідка</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content" id="content">
+
+        <div class="chips-container">
+            <button class="chip active">Усі</button>
+            <button class="chip">Музика</button>
+            <button class="chip">Ігри</button>
+            <button class="chip">Програмування</button>
+            <button class="chip">Прямі трансляції</button>
+            <button class="chip">Скетчі</button>
+            <button class="chip">Новини</button>
+            <button class="chip">Футбол</button>
+            <button class="chip">Кулінарія</button>
+            <button class="chip">Останнє</button>
+        </div>
+
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="https://i.ytimg.com/vi/8D5E33S-oH4/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBiXNWeBu83FPkygrF2XQlQtUVmrA" alt="Preview">
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="https://yt3.ggpht.com/P33Us4gHGw3RNdVvklM62_4y0qLTQxPMVPG-99ok8xLaEWZQax41RgignQUGbn-0c-uCJpDXrQ=s68-c-k-c0x00ffffff-no-rj" alt="Channel">
+                    </div>
+                    <div class="video-text">
+                        <h3 class="video-title">CSS Flexbox Все Що Потрібно Знати Для Початківців | Українською Мовою</h3>
+                        <p class="channel-name">Igor Bylik</p>
+                        <p class="meta-info">834 переглядів • 2 роки тому</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="https://i.ytimg.com/vi/EEVkFW_IDec/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBOCBCHkxoLUPHYQLRPgRimTBrmfA" alt="Preview">
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="https://yt3.ggpht.com/TACOEzDo5VECrFg02QgvGo-4m7d9Hbi4XnuQ0RmAKn3EPM2jOonICDxoD5wUO5ky6dPHpyDD8mo=s88-c-k-c0x00ffffff-no-rj" alt="Channel">
+                    </div>
+                    <div class="video-text">
+                        <h3 class="video-title">[ПРАКТИКА] - Строим структуру своего PHP приложения + аутентификация</h3>
+                        <p class="channel-name">AreaWeb</p>
+                        <p class="meta-info">42 тис. переглядів • 5 років тому</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="https://i.ytimg.com/vi/EYB7NOSY-hI/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAuEZ1gls60RCHRtjU_SX49fA_Jtg" alt="Preview">
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="https://yt3.ggpht.com/GBQB7uZvLvAOuzFArzoAiJsas5HW7dcsExeqERP_ORGwx7vSWyjTdbC97qMWzePvfiyufsNyods=s88-c-k-c0x00ffffff-no-rj" alt="Channel">
+                    </div>
+                    <div class="video-text">
+                        <h3 class="video-title">Mittens The Chess Bot Will Make You Quit Chess</h3>
+                        <p class="channel-name">GMHikaru</p>
+                        <p class="meta-info">6,8 млн. переглядів • 2 роки тому</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="https://i.ytimg.com/vi/cjZvFY6__qw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLByZdT5P4zeWA3ehKELiMfVrn5Ucw" alt="Preview">
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="https://yt3.googleusercontent.com/ytc/AIdro_k94J7kkxpmlJe3c2iDFJpHk8SAADPpf49cN7XjomXSzEE=s120-c-k-c0x00ffffff-no-rj" alt="Channel">
+                    </div>
+                    <div class="video-text">
+                        <h3 class="video-title">I Skied Down Mount Everest (world first, no oxygen)</h3>
+                        <p class="channel-name">Red Bull</p>
+                        <p class="meta-info">16 млн. переглядів • 2 тижні тому</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="https://i.ytimg.com/vi/IqViXhLmg9A/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD0oIcgekUDuENniXy7bciqeMh0jA" alt="Preview">
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="https://yt3.ggpht.com/9Y1URuvYbYRxWoJkpoQt1KOaYUooou9cp6lZJFqGhkWiKfi_H3dVMRSkPPRoDlF4KegyMEDNyw=s88-c-k-c0x00ffffff-no-rj" alt="Channel">
+                    </div>
+                    <div class="video-text">
+                        <h3 class="video-title">
+                            just smoke and jazz, darling. | Night retro jazz</h3>
+                        <p class="channel-name">Pause,maybe?</p>
+                        <p class="meta-info">278 тис. переглядів • 3 місяці тому</p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="thumbnail">
+                    <img src="https://i.ytimg.com/vi/0lZORNRJhrg/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDatLsDNwXpc4dLSiwcSqaOkTvupQ" alt="Preview">
+                </div>
+                <div class="video-info">
+                    <div class="channel-avatar">
+                        <img src="https://yt3.ggpht.com/nAD7jcUUan5dUUIRWjFNoCjEOW-M75-lMQZER43kEuAvwKqOxCSzXuhgaL1XLDLwU7U3Da_QNw=s88-c-k-c0x00ffffff-no-rj" alt="Channel">
+                    </div>
+                    <div class="video-text">
+                        <h3 class="video-title">NBA Огляд дня (23.11.2025): Харден у праймі, домінація Пістонс</h3>
+                        <p class="channel-name">Maincast Basketball</p>
+                        <p class="meta-info">325 переглядів • 56 хвилин тому</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('collapsed');
+        document.getElementById('content').classList.toggle('expanded');
+    }
+</script>
+
+</body>
+</html>
