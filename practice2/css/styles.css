@@ -90,7 +90,7 @@ h2 {
     /* b. Ширина та внутрішні відступи */
     width: 100%;
     max-width: 1200px;
-    padding: 25px;         /* Більше повітря всередині */
+    padding: 25px; /* Більше повітря всередині */
     box-sizing: border-box;
 
     /* c. Закруглені кути (Сильніше закруглення) */
@@ -123,7 +123,7 @@ h2 {
     border-radius: 10px; /* Округлені плашки */
     font-size: 1rem;
     text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Тінь для заголовків */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для заголовків */
 }
 
 /* Комірка дня */
@@ -154,7 +154,7 @@ h2 {
 .calendar-day.empty {
     background: #f8f9fa;
     border: none;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.03); /* Внутрішня тінь */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03); /* Внутрішня тінь */
 }
 
 /* Події (Пари) */
@@ -167,7 +167,7 @@ h2 {
     line-height: 1.4;
     border-left: 4px solid #27ae60;
     color: #2c3e50;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .event:nth-child(even) {
@@ -204,10 +204,12 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
+
 th, td {
     padding: 15px;
     border-bottom: 1px solid #ddd;
 }
+
 th {
     background-color: #27ae60;
     color: white;
@@ -219,12 +221,15 @@ th {
     .calendar {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .calendar-header {
         display: none;
     }
+
     main {
         padding: 0 15px;
     }
+
     .calendar, section {
         padding: 15px;
     }
@@ -234,9 +239,11 @@ th {
     .calendar {
         grid-template-columns: 1fr;
     }
+
     .calendar-day {
         min-height: auto;
     }
+
     nav ul {
         flex-direction: column;
         align-items: center;
