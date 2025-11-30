@@ -92,19 +92,21 @@ table {
     border-collapse: collapse;
     margin: 1rem 0;
 }
+
 th, td {
     border: 1px solid #ccc;
     text-align: left;
     padding: 12px;
 }
+
 th {
     background-color: #27ae60;
     color: white;
 }
+
 tr:nth-child(even) {
     background-color: #f2f7f5;
 }
-
 
 
 .calendar {
@@ -182,6 +184,7 @@ tr:nth-child(even) {
     .calendar {
         grid-template-columns: repeat(3, 1fr);
     }
+
     .calendar-header {
         display: none;
     }
@@ -191,6 +194,7 @@ tr:nth-child(even) {
     .calendar {
         grid-template-columns: 1fr;
     }
+
     .calendar-day {
         min-height: auto;
     }
