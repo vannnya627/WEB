@@ -1,0 +1,67 @@
+
+li:first-child {
+    font-weight: bold;
+}
+
+a:not(:last-child) {
+    color: red;
+}
+
+input[disabled] {
+    background-color: lightgray;
+}
+
+div > p:first-child {
+    font-weight: 600;
+}
+
+a[href^="https"] {
+    color: green;
+}
+
+input[type="text"] {
+    border: 1px solid blue;
+}
+
+li:first-child,
+li:last-child {
+    font-size: 24px;
+}
+
+div p {
+    font-size: 16px;
+}
+
+input:checked {
+    background-color: lightskyblue;
+}
+
+li > a {
+    text-decoration: underline;
+}
+
+li:nth-child(even) {
+    font-weight: bold;
+}
+
+input[type="text"]:not([disabled]) {
+    background-color: #f0f0f0; /* Світло-сірий */
+}
+
+p:first-child {
+    font-size: 24px;
+}
+
+.special + li {
+    text-decoration: line-through;
+}
+
+p::first-letter {
+    font-size: 36px;
+}
+
+a::after {
+    content: ' ↗';
+    font-size: 0.8em;
+    color: #666;
+}
